@@ -44,6 +44,7 @@ class ExcReactGenerator extends Generator {
     this.fs.writeJSON(this.destinationPath('.babelrc'), { presets: [['@babel/preset-env', { targets: { node: 'current' } }]] })
     // add dependencies
     utils.addDependencies(this, {
+      '@adobe/exc-app': '^0.2.10',
       'core-js': '^3.6.4',
       react: '^16.13.1',
       'react-dom': '^16.13.1',
@@ -52,7 +53,6 @@ class ExcReactGenerator extends Generator {
     })
     utils.addDependencies(this, {
       '@babel/core': '^7.8.7',
-      '@babel/polyfill': '^7.8.7',
       '@babel/preset-env': '^7.8.7'
     }, true)
     // add env variable to load ui in exc shell

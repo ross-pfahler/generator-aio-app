@@ -13,7 +13,6 @@ governing permissions and limitations under the License.
 
 import React from 'react'
 import PropTypes from 'prop-types'
-import ErrorBoundary from 'react-error-boundary'
 
 import './App.css'
 <% if (hasBackend) { %>
@@ -39,13 +38,11 @@ export default class App extends React.Component {
 
     this.state = {}
 
-    console.log('runtime object:', this.props.runtime)
     console.log('ims object:', this.props.ims)
   }
 
   static get propTypes () {
     return {
-      runtime: PropTypes.any,
       ims: PropTypes.any
     }
   }
