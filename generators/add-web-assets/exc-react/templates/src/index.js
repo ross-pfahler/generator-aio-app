@@ -49,8 +49,8 @@ function bootstrapRaw () {
 }
 
 function bootstrapInExcShell () {
-  // this options allows the app to takeover 100% of the browser's viewport
-  page.canTakeover = true
+  // Takes over 100% the the screen, including the topbar
+  // page.viewportTakeover = true
 
   // set the app name to the Shell header
   topbar.customEnvLabel = '<%= projectName %>'
